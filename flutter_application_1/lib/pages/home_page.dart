@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/cart_pages.dart';
 
 import '../Widgets/appbar_widgets.dart';
 import '../Widgets/categories_widget.dart';
@@ -108,7 +109,9 @@ class HomePage extends StatelessWidget {
           )
         ]),
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, "cartPage")
+          },
           child: Icon(
             CupertinoIcons.cart,
             size: 28,

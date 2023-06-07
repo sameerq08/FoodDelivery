@@ -11,7 +11,9 @@ class AppBarWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            Scaffold.of(context).openDrawer();
+          },
           child: Container(
             // ignore: prefer_const_constructors
             padding: EdgeInsets.all(8),
@@ -33,9 +35,7 @@ class AppBarWidget extends StatelessWidget {
           ),
         ),
         InkWell(
-          onTap: () {
-            Scaffold.of(context).openDrawer();
-          },
+          onTap: () {},
           child: Container(
             // ignore: prefer_const_constructors
             padding: EdgeInsets.all(8),
